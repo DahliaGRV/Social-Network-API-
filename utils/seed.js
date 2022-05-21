@@ -13,9 +13,7 @@ connection.once('open', async () => {
   const thoughts = getRandomThoughts(10);
 
   for (let i = 0; i < 20; i++) {
-    const fullName = getRandomName();
-    const first = fullName.split(' ')[0];
-    const last = fullName.split(' ')[1];
+    const username = getRandomName();
 
     users.push({
       first,
@@ -25,11 +23,11 @@ connection.once('open', async () => {
   }
 
   await User.collection.insertMany(users);
-  await Video.collection.insertMany(videos);
+  await Thought.collection.insertMany(thoughts);
 
-  // loop through the saved videos, for each video we need to generate a video response and insert the video responses
+  // loop through the saved thoughts, for each thought we need to generate a thought reaction and insert the thought reactions
   console.table(users);
-  console.table(videos);
+  console.table(thoughts);
   console.info('Seeding complete! 🌱');
   process.exit(0);
 });
