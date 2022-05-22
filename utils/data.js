@@ -54,8 +54,12 @@ const usernames = [
     'Zuriel',
     ``,
   ];
+
+  const emails = [
+      
+  ]
   
-  const descriptionsBodies = [
+  const thoughtBodies = [
     'How to disagree with someone',
     'iPhone review',
     'how-to video',
@@ -94,7 +98,7 @@ const usernames = [
     for (let i = 0; i < int; i++) {
       results.push({
         published: Math.random() < 0.5,
-        description: getRandomArrItem(descriptionsBodies),
+        thoughtText: getRandomArrItem(thoughtBodies),
         advertiserFriendly: Math.random() < 0.5,
         reactions: [...getThoughtReactions(3)],
       });
