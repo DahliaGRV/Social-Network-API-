@@ -15,6 +15,10 @@ const thoughtSchema = new Schema(
         default:Date.now
 
       },
+      username: {
+        type: String,
+        required: true,
+      },
       reactions:[Reaction],
       
     }, 
@@ -29,7 +33,7 @@ const thoughtSchema = new Schema(
   );
 
   thoughtSchema
-  .virtual('getReactions')
+  .virtual('ReactionCount')
   // Getter
   .get(function () {
     return this.reactions.length;

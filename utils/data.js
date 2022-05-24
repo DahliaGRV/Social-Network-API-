@@ -1,76 +1,22 @@
 const usernames = [
-    'Aaran',
-    'Aaren',
-    'Aarez',
-    'Aarman',
-    'Aaron',
-    'Aaron-James',
-    'Aarron',
-    'Aaryan',
-    'Aaryn',
-    'Aayan',
-    'Aazaan',
-    'Abaan',
-    'Abbas',
-    'Abdallah',
-    'Abdalroof',
-    'Abdihakim',
-    'Abdirahman',
-    'Abdisalam',
-    'Abdul',
-    'Abdul-Aziz',
-    'Abdulbasir',
-    'Abdulkadir',
-    'Abdulkarem',
-    'Ze',
-    'Zechariah',
-    'Zeek',
-    'Zeeshan',
-    'Zeid',
-    'Zein',
-    'Zen',
-    'Zendel',
-    'Zenith',
-    'Zennon',
-    'Zeph',
-    'Zerah',
-    'Zhen',
-    'Zhi',
-    'Zhong',
-    'Zhuo',
-    'Zi',
-    'Zidane',
-    'Zijie',
-    'Zinedine',
-    'Zion',
-    'Zishan',
-    'Ziya',
-    'Ziyaan',
-    'Zohaib',
-    'Zohair',
-    'Zoubaeir',
-    'Zubair',
-    'Zubayr',
-    'Zuriel',
-    ``,
+    'catlovinJoe',
+    'stardew_fan',
+    'definitelynotdahlia',
+    'plant_mom',
   ];
-
-  const emails = [
-      
-  ]
   
   const thoughtBodies = [
     'How to disagree with someone',
     'iPhone review',
-    'how-to video',
-    'video essay on the history of video games',
-    'How to make money on the App Store',
+    'I just love every cat that I see',
+    'Super excited to try pixel art!',
+    'Did anyone catch the last season of You?',
     'Learn NextJS in five minutes (Not clickbate)',
-    'Movie trailer',
+    'Can anyone guess what dinner will be??',
     'Hello world',
     'Another possible solution to the algorithm',
-    'Apology video',
-    'Submission for startup pitch',
+    'We love you Johnny Depp!! ',
+    'Ukraine is still under attack in case anyone is wondering..',
   ];
   
   const possibleReactions = [
@@ -83,30 +29,28 @@ const usernames = [
     'Reply: The side effects of in app purchases on digital marketplaces',
   ];
   
-  const users = [];
-  
+
   // Get a random item given an array
   const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
   
-  // Gets a random full name
-  const getRandomName = () =>
-    `${getRandomArrItem(usernames)} ${getRandomArrItem(usernames)}`;
-  
-  // Function to generate random videos that we can add to the database. Includes video responses.
+  // Gets a random username
+const getRandomName = () =>
+`${getRandomArrItem(usernames)}`;
+
+  // Function to generate random thoughts that we can add to the database. Includes thought reactions.
   const getRandomThoughts = (int) => {
     let results = [];
     for (let i = 0; i < int; i++) {
       results.push({
-        published: Math.random() < 0.5,
         thoughtText: getRandomArrItem(thoughtBodies),
-        advertiserFriendly: Math.random() < 0.5,
+        username: getRandomName(),
         reactions: [...getThoughtReactions(3)],
       });
     }
     return results;
   };
   
-  // Create the responses that will be added to each video
+  // Create the reactions that will be added to each thought
   const getThoughtReactions = (int) => {
     if (int === 1) {
       return getRandomArrItem(possibleReactions);
@@ -122,4 +66,4 @@ const usernames = [
   };
   
   // Export the functions for use in seed.js
-  module.exports = { getRandomName, getRandomThoughts, getRandomThoughts };
+  module.exports = { getRandomThoughts, getRandomThoughts };
