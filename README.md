@@ -36,7 +36,7 @@ This README is covered under license GPLv2
 * [GitHub Portfolio](https://github.com/DahliaGRV)
 
 * [Repository Link](https://github.com/DahliaGRV/Social-Network-API-)
-* [Deployed Link](N/A)
+* [Deployed Link]([N/A](https://drive.google.com/file/d/1WdB7sYia-szG4n-amjxid-ClpJlDiJed/view)) Video link (not deployed)
 
 ## Summary
 This was my first time using MongoDB and it was challenging to me that seeds need to be manually put into the corresponding tables if they are not directly putting data into that table itself. For example, the thoughts need to be put in manually even though the thought table knows which username they belong to.  
