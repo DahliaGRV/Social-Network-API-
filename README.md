@@ -14,6 +14,13 @@
 ## Description
 A mock Social Network API
 
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/98775943/169942703-47430198-72d7-45db-b3a4-6a2e1c493d1f.png)
+![image](https://user-images.githubusercontent.com/98775943/169942760-f92b41c2-52cf-4d24-9757-53f7f20d0f6b.png)
+
+
+
 ## Installation
 In order for this program to work, the user will need to run npm install to install all of the packages listed in the package.json file. Then the user will want to run the seeds with npm run seed. Last the user will want to either use the routes provided in Insomnia or a similar application. 
 
